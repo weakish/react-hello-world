@@ -1,0 +1,5 @@
+{
+    "rules": {
+        "i18n/no-chinese-character": 0
+    }
+}
