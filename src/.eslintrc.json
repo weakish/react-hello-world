@@ -1,0 +1,23 @@
+{
+    "plugins": [
+        "i18n"
+    ],
+    "extends": [
+        "react-app",
+        "prettier/@typescript-eslint"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "**/*.ts?(x)"
+            ],
+            "rules": {
+                "no-shadow": "error",
+                "react/self-closing-comp": "error",
+                "no-console": 0,
+                "@typescript-eslint/no-explicit-any": "error",
+                "i18n/no-chinese-character": 1
+            }
+        }
+    ]
+}
