@@ -1,28 +1,28 @@
-import React, { ReactElement } from 'react';
-import { useTranslation, Trans } from 'react-i18next';
-import logo from './logo.svg';
-import './App.css';
+import type { ReactElement } from 'react'
+import { useTranslation, Trans } from 'react-i18next'
+import logo from './logo.svg'
+import './App.css'
 
 type HelloProps = { readonly name: string }
 
-function Hello({ name }: HelloProps): ReactElement<HelloProps> {
+function Hello({ name }: HelloProps): ReactElement {
   // The following patterns are not considered problems:
-  return <Trans i18nKey="hello"><button>你好， {{name}}</button></Trans>
+  return (
+    <Trans i18nKey="hello" values={{ name }} components={[<button />]} />
+  )
 }
 
 function App() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>The following patterns are considered problems:</p>
-        <p>  
-        測試
-        </p>  
+        <p>測試</p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://react.dev"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -31,7 +31,7 @@ function App() {
         <Hello name={t('world')} />
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
