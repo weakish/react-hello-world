@@ -1,0 +1,13 @@
+name: react-hello-world
+version: "0.0.0"
+description: React hello world sample with Vite, TypeScript, and i18next
+author: weakish
+license: 0BSD
+repository: https://github.com/weakish/react-hello-world
+targets:
+  - cursor
+includes: auto
+dependencies:
+  apm:
+    - weakish/vibe#master
+  mcp: []
